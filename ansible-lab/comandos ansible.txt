@@ -1,0 +1,12 @@
+ansible-galaxy install geerlingguy.mysql
+
+ansible-playbook 
+
+
+vi /etc/host
+
+vi /etc/ansible/hosts
+
+cat /root/.ssh/id_rsa.pub
+
+vagrant reload --provision
