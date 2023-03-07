@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 Vagrant.configure("2") do |config|
 
    config.vm.box = "centos/7"
    config.vm.provision "shell", path: "provision.sh" 
    
 end
+=======
+Vagrant.configure("2") do |config|
+
+   config.vm.box = "centos/7"
+   config.vm.provision "shell", path: "provision.sh" 
+
+   
+end
+>>>>>>> a6a79c0cee6779046b9c518b3aabec63a0e17a02

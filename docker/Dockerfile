@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FROM openjdk:8-jdk-alpine
 RUN addgroup -S notes && adduser -D notes -G notes
 ENV MAVEN_VERSION 3.5.4
@@ -17,4 +18,12 @@ RUN mvn package -Dmaven.test.skip=true
 ARG JAR_FILE=*.jar
 RUN cp ./target/easy-notes-1.0.0.jar /opt/notes/easy-note.jar
 COPY application.properties application.properties
+=======
+FROM openjdk:8-jdk-alpine
+RUN addgroup -S notes && adduser -D notes -G notes
+USER notes:notes
+ARG JAR_FILE=*.jar
+COPY ${JAR_FILE} easy-note.jar
+COPY application.properties application.properties
+>>>>>>> a6a79c0cee6779046b9c518b3aabec63a0e17a02
 ENTRYPOINT ["JAVA", "-jar", "easy-note.jar"]
